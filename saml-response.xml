@@ -1,0 +1,41 @@
+<saml2p:Response Version="2.0"
+	xmlns:saml2p="urn:oasis:names:tc:SAML:2.0:protocol">
+	<ds:Signature xmlns:ds="http://www.w3.org/2000/09/xmldsig#">
+		<ds:SignedInfo>
+			<ds:CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" />
+			<ds:SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha1" />
+			<ds:Reference URI="">
+				<ds:Transforms>
+					<ds:Transform
+						Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" />
+					<ds:Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" />
+				</ds:Transforms>
+				<ds:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+				<ds:DigestValue>hpKtsQH4dxA1TgEqPPnU/Ii3kM0=</ds:DigestValue>
+			</ds:Reference>
+		</ds:SignedInfo>
+		<ds:SignatureValue>Zfr1sqAumBSfp94xElmDwnPxuOL3hpcAYiHqZQ54eIjB0s4mxViIUc5g43Wp2CKmtFJ/NSo/+wfcG6L+Q6dfOJCG07zTe0lCi8XZGw2dpVOFMnuP8tT+6fLPe1J8TXf8RmJ8we2Nuoo+6l5LYCNOzwC/y5vkSqWaP1tckc9y/BQ=
+		</ds:SignatureValue>
+		<ds:KeyInfo>
+			<ds:X509Data>
+				<ds:X509Certificate>MIIB4jCCAUugAwIBAgIEe8tQPjANBgkqhkiG9w0BAQsFADAkMQswCQYDVQQGEwJOTzEVMBMGA1UE
+					AxMMbXlkb21haW4uY29tMB4XDTE2MDYyNDEwNTgzMloXDTE4MDYyNDEwNTgzMlowJDELMAkGA1UE
+					BhMCTk8xFTATBgNVBAMTDG15ZG9tYWluLmNvbTCBnzANBgkqhkiG9w0BAQEFAAOBjQAwgYkCgYEA
+					jZn8jIdVohZYcoHUDaujNZnp7rTAofY7Be0dOPHqgJDFH8ivAb0cjwyEYbftrosgDrfVJTJe8kQp
+					aSM4FS0r7X0rA8nSbE/TWxNes2ZCy6nWf6vdPGcJmFvuU1sB0sx+BQFIwhR4M3KCnt4+5IAgXFv0
+					PiZzd9epwNNKqc7iMz0CAwEAAaMhMB8wHQYDVR0OBBYEFLzksawyJxcdfkjKRGzwJVr4dgyIMA0G
+					CSqGSIb3DQEBCwUAA4GBAHsz6p+JWHN6QxALbpgfe21lqFFbLrg0Bzek65tBg4mFwlpzmE46AxvS
+					mNlYaBBrS74rrzBm62sLWf+QEMMGOLYqOKCu7qAC6k/GBscyNMkxCERmK2M/BCX1o8j8gV4tpcQV
+					rELoZQ4e1f8+dPnVc75uEVfJT2L0xxd2CQ0QM2HN
+				</ds:X509Certificate>
+			</ds:X509Data>
+		</ds:KeyInfo>
+	</ds:Signature>
+	<saml2:Assertion Version="2.0"
+		xmlns:saml2="urn:oasis:names:tc:SAML:2.0:assertion">
+		<saml2:Issuer NameQualifier="my.xxx:email">some.de</saml2:Issuer>
+		<saml2:Subject>
+			<saml2:NameID>sombody@some.de</saml2:NameID>
+		</saml2:Subject>
+	</saml2:Assertion>
+</saml2p:Response>

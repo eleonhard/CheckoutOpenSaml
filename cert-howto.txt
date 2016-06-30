@@ -1,0 +1,27 @@
+see https://support.signicat.com/display/S2/How+to+create+a+SAML+certificate+for+use+with+the+SAML+Library
+
+1)
+The SAML certificate is a standard x509 certificate
+create a SAML certificate
+
+keytool.exe -genkey -alias saml -dname "CN=mydomain.com, C=NO" -keystore saml-keystore -keyalg RSA -validity 730 -keysize 1024
+
+Keytool will ask for a password twice. The first password protects the keystore. 
+The second password protects the private key inside the keystore. You may use the same password for both. 
+The passwords must match the configuration parameters in SamlProducerConfiguration. 
+--> store12
+
+2) 
+Send the public certificate to the SAML Consumer party
+
+The SAML Consumer needs to know the public part of your certificate. You may export the public part of the certificate and send this.
+
+
+keytool -export -rfc -keystore saml-keystore -alias saml -file saml-cert.public
+
+The public part is not a secret (it will be embedded in clear text in every SAML Response as well). 
+However, it is of course important that the SAML Consumer is using the correct certificate. 
+
+
+3) export a X.509 Certificate against a Key in a KeyStore 
+keytool.exe -export -alias saml -keystore saml-keystore -file saml-key.cer
