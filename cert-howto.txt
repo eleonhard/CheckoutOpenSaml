@@ -1,6 +1,6 @@
 see https://support.signicat.com/display/S2/How+to+create+a+SAML+certificate+for+use+with+the+SAML+Library
 
-1.
+1...
 The SAML certificate is a standard x509 certificate
 create a SAML certificate
 
