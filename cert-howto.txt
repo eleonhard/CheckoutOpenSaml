@@ -11,7 +11,7 @@ The second password protects the private key inside the keystore. You may use th
 The passwords must match the configuration parameters in SamlProducerConfiguration. 
 --> store12
 
-2) 
+2.
 Send the public certificate to the SAML Consumer party
 
 The SAML Consumer needs to know the public part of your certificate. You may export the public part of the certificate and send this.
@@ -23,5 +23,5 @@ The public part is not a secret (it will be embedded in clear text in every SAML
 However, it is of course important that the SAML Consumer is using the correct certificate. 
 
 
-3) export a X.509 Certificate against a Key in a KeyStore 
+3. export a X.509 Certificate against a Key in a KeyStore 
 keytool.exe -export -alias saml -keystore saml-keystore -file saml-key.cer
